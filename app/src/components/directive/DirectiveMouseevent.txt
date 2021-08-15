@@ -1,0 +1,34 @@
+<template>
+  <div id="outer" @mouseenter="mouseenter" @mouseleave="mouseleave"
+                  @mouseover="mouseover" @mouseout="mouseout">
+      外（outer）
+    <p id="inner">
+      内（inner）
+    </p>
+  </div>
+</template>
+
+<script>
+export default {
+  data(){
+    return {
+      resultenterleave: "",
+      resultoverout: ""
+    }
+  },
+  methods: {
+    mouseenter: function(e) {
+      this.resultenterleave += "Enter:" + e.target.id + "<br />";
+    },
+    mouseover: function(e) {
+      this.resultoverout += "Over:" + e.target.id + "<br />";
+    },
+    mouseleave: function(e) {
+      this.resultenterleave += "Leave:" + e.target.id + "<br />"; 
+    },
+    mouseout: function(e) {
+      this.resultoverout += "Out:" + e.target.id + "<br />"; 
+    },
+  }
+}
+</script>

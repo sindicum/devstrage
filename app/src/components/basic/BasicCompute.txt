@@ -1,0 +1,33 @@
+<template>
+  <div>
+    <form>
+      <input type="button" value="クリック" v-on:click="onclick" />
+    </form>
+    <div>算出プロパティ：{{ randomc }}</div>
+    <div>メソッド：{{ randomm() }}</div>
+    <div>現在日時：{{ current }}</div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      current: new Date().toLocaleString(),
+    }
+  },
+  computed: {
+    randomc: function() {
+      return Math.random();
+    }
+  },
+  methods: {
+    onclick: function() {
+      this.current = new Date().toLocaleString();
+    },
+    randomm: function() {
+      return Math.random();
+    }
+  }
+}
+</script>

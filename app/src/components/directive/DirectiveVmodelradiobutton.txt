@@ -1,0 +1,25 @@
+<template>
+  <div>
+    <form>
+      <lable for="dog">いぬ</lable>
+      <input type="radio" id="dog" value="いぬ" v-model="pet" />
+      <br />
+      <lable for="cat">ねこ</lable>
+      <input type="radio" id="cat" value="ねこ" v-model="pet" />
+      <br />
+      <lable for="other">その他</lable>
+      <input type="radio" id="other" value="その他" v-model="pet" />
+    </form>
+    <p>ペット:{{ pet }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      pet: 'いぬ'
+    }
+  }
+}
+</script>

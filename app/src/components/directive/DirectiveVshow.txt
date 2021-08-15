@@ -1,0 +1,21 @@
+<template>
+  <div>
+    <div v-show="error">エラーです</div>
+    <button @click="errorinfo">クリック</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data(){
+    return {
+      error: false
+    }
+  },
+  methods: {
+    errorinfo: function() {
+      this.error = true
+    }
+  }
+}
+</script>

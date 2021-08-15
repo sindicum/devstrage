@@ -1,0 +1,14 @@
+<template>
+    ...略...
+    <div><a v-bind:href="url">Vue.js</a></div>
+</template>
+
+<script>
+export default {
+  data(){
+    return {
+      url: 'https://v3.vuejs.org/',
+    }
+  },
+}
+</script>

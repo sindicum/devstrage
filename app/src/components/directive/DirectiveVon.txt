@@ -1,0 +1,20 @@
+<template>
+  <div>
+    <button @click="onclick">クリック</button>{{ message }}
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: ''
+    }
+  },
+  methods: {
+    onclick: function() {
+      this.message = new Date().toLocaleString();
+    },
+  }
+}
+</script>

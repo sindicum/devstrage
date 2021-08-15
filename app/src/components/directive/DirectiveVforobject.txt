@@ -1,0 +1,21 @@
+<template>
+  <div>
+    <table>
+      <ul v-for="a in json" :key="a">{{ a.person.name }}</ul>
+    </table>
+  </div>
+</template>
+
+<script>
+export default {
+  data(){
+    return {
+      json: [
+        {id:1,person:{ name:'ken',power:1500}},
+        {id:2,person:{ name:'toki',power:1300}},
+        {id:3,person:{ name:'rao',power:1800}},
+      ]
+    }
+  },
+}
+</script>

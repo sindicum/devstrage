@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <form>
+      <label>入力テキスト</label>
+      <input type="text" v-model="inputText" />
+    </form>
+    <div>「{{ inputText }}」と入力されました</div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      inputText: ''
+    }
+  },
+}
+</script>

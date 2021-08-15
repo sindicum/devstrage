@@ -1,0 +1,26 @@
+<template>
+  <div>
+    <table>
+      <th>id</th><th>名前</th><th>パワー</th>
+      <tr v-for="b in fighter" :key="b">
+        <td>{{ b.id }}</td>
+        <td>{{ b.name }}</td>
+        <td>{{ b.power }}</td>
+      </tr>
+    </table>
+  </div>
+</template>
+
+<script>
+export default {
+  data(){
+    return {
+      fighter: [
+        {id:1,name:'ken',power:1500},
+        {id:2,name:'toki',power:1300},
+        {id:3,name:'rao',power:1800}
+      ]
+    }
+  },
+}
+</script>
