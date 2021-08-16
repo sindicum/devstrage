@@ -1,20 +1,20 @@
 <template>
-  <div>
-    <div v-show="error">エラーです</div>
-    <button @click="errorinfo">クリック</button>
-  </div>
+    <div>
+      <div v-show="status">ボタンクリックされました</div>
+      <button @click="clicked">クリック</button>
+    </div>
 </template>
 
 <script>
 export default {
   data(){
     return {
-      error: false
+      status: false
     }
   },
   methods: {
-    errorinfo: function() {
-      this.error = true
+    clicked: function() {
+      this.status = true
     }
   }
 }

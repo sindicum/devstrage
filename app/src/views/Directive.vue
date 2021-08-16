@@ -12,6 +12,7 @@
     <DirectiveVforarray />
     <DirectiveVforobject />
     <DirectiveVshow />
+    <DirectiveVbind />
   </div>
 </template>
 
@@ -28,6 +29,7 @@ import DirectiveVfor from "../components/directive/DirectiveVfor.vue"
 import DirectiveVforarray from "../components/directive/DirectiveVforarray.vue"
 import DirectiveVforobject from "../components/directive/DirectiveVforobject.vue"
 import DirectiveVshow from "../components/directive/DirectiveVshow.vue"
+import DirectiveVbind from "../components/directive/DirectiveVbind.vue"
 
 
 export default {
@@ -44,7 +46,8 @@ export default {
     DirectiveVfor,
     DirectiveVforarray,
     DirectiveVforobject,
-    DirectiveVshow
+    DirectiveVshow,
+    DirectiveVbind
   }
 }
 </script>

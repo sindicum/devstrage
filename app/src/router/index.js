@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Directive from '../views/Directive.vue'
+import DataTransfer from '../views/DataTransfer.vue'
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/directive',
     name: 'directive',
     component: Directive
+  },
+  {
+    path: '/datatransfer',
+    name: 'datatransfer',
+    component: DataTransfer
   },
 
   // {

@@ -1,12 +1,11 @@
 <template>
   <div class="card border-0 m-3">
-    <Title title="v-show" />
-    <a id="vshow"></a>
+    <Title title="親→子 Props" id="props" />
     <div class="text-secondary lineheight">
+
     </div>
     <div class="card mt-3 p-3">
-      <div v-show="status">ボタンクリックされました</div>
-      <button @click="clicked" class="btn btn-primary" style="width: 100px">クリック</button>
+      <div v-bind:id="yourName">こんにちは、{{ yourName }}さん！</div>
     </div>
     <Highlight :codeprop=code />
   </div>
@@ -15,24 +14,21 @@
 <script>
 import Title from '../templates/Title.vue'
 import Highlight from '../templates/Highlight.vue'
-import Code from 'raw-loader!./DirectiveVshow.txt' 
+import Code from 'raw-loader!./Props.txt' 
 
 export default {
   data(){
     return {
       code: Code,
-      status: false
     }
   },
+  props: [ 'yourName' ],
   components: {
     Title,
     Highlight
   },
   methods: {
-    clicked: function() {
-      this.status = true
-    }
-  }
+  },
 }
 </script>
 

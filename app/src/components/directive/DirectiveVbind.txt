@@ -1,0 +1,23 @@
+<template>
+  <div>
+    <div :class="attrs">test</div>
+    <button type="button" @click="changetextcolor">テキストカラーの変更</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data(){
+    return {
+      attrs: {
+        'text-danger': true
+      }
+    }
+  },
+  methods: {
+    changetextcolor() {
+      this.attrs['text-danger'] = !this.attrs['text-danger']
+    }
+  }
+}
+</script>

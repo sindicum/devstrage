@@ -48,10 +48,22 @@ export default {
             { subTitle: "v-for 配列", subLink: "/directive#vforarray" },
             { subTitle: "v-for オブジェクト", subLink: "#vforobject" },
             { subTitle: "v-show", subLink: "/directive#vshow" },
+            { subTitle: "v-bind", subLink: "/directive#vbind" },
           ],
           isOpened: false,
           mainmenubgcolor: "" 
-        }
+        },
+        {
+          mainmenu: { mainTitle:"データの管理と通信", mainLink: "/datatransfer" },
+          submenu: [
+            { subTitle: "親から子 propsオプション", subLink: "/datatransfer#props" },
+            { subTitle: "子から親 emitメソッド", subLink: "/datatransfer#emit" },
+            { subTitle: "アプリ全体 Vuex", subLink: "/datatransfer#vuex" },
+
+          ],
+          isOpened: false,
+          mainmenubgcolor: "" 
+        },
       ],
     }
   },
