@@ -1,0 +1,21 @@
+// 親コンポーネント
+
+<template>
+  <div>
+    <Vslot>
+      <h1 class="text-danger">ブイスロット</h1>
+      <h4 class="text-danger">です</h4>
+    </Vslot>
+  </div>
+</template>
+
+<script>
+// 子コンポーネントのインポート
+import Vslot from '...'
+
+export default {
+  components: {
+    Vslot,
+  }
+}
+</script>

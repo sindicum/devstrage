@@ -1,0 +1,8 @@
+// 子コンポーネント
+
+<template>
+  <div>
+    <p>以下にv-slotが差し込まれます</p>
+    <slot>v-slot?</slot>
+  </div>
+</template>

@@ -1,0 +1,24 @@
+// 親コンポーネント
+
+<template>
+  <div>
+    <Props v-for="name in nameList"
+      :key='name'
+      v-bind:myName="name"
+      yourName="ケンシロウ"
+    />
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      group: ["ラオウ","トキ"],
+    }
+  },
+  components: {
+    Props,
+  }
+}
+</script>

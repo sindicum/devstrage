@@ -1,0 +1,14 @@
+// 子コンポーネント
+
+<template>
+  <div>
+    <div v-bind:id="myName">私は{{ myName }}です</div>
+    <div>あなたは{{ yourName }}です</div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: [ 'myName', 'yourName' ],
+}
+</script>

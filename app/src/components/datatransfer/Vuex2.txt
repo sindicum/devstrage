@@ -2,7 +2,6 @@ import { createStore } from 'vuex'
 
 export default createStore({
   strict: true,
-  // 本番環境ではFalseにすること 
   namespaced: true,
   state: {
     books: [
@@ -35,13 +34,7 @@ export default createStore({
   },
   mutations: {
     addBook(state, payload) {
-      console.log("payloadです")
-      console.log(payload)
-      console.log("stateです")
-      console.log(state)
       state.books.push(payload.book)
     }
   },
-  actions: {
-  }
 })

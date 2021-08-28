@@ -1,0 +1,27 @@
+// 親コンポーネント
+
+<template>
+  <div class="card mt-3 p-3">
+    <Emit step="1" v-on:plus="onplus" />
+    <Emit step="-2" v-on:plus="onplus" />
+    <p>現在値:{{ current }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      current: 0
+    }
+  },
+  methods: {
+    onplus: function(e) {
+      this.current += e;
+    }
+  },
+  components: {
+    Emit
+  }
+}
+</script>

@@ -7,8 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import VueHighlightJS from 'vue3-highlightjs'
 import 'highlight.js/styles/routeros.css'
 
-const app = createApp(App)
-app.use(store)
-app.use(router)
-app.use(VueHighlightJS)
-app.mount('#app')
+createApp(App)
+  .use(store)
+  .use(router)
+  .use(VueHighlightJS)
+  .mount('#app')

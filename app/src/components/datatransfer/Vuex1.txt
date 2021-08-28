@@ -1,0 +1,53 @@
+<template>
+  <div>
+    <form @submit.prevent="onclick">
+      <label for="id">ID:</label>
+      <input type="text" id="id" v-model="id" /> <br />
+      <label for="title">氏名:</label>
+      <input type="text" id="title" v-model="title" /> <br />
+      <label for="price">価格:</label>
+      <input type="text" id="price" v-model="price" /> <br />
+      <button type="button" @click="onclick">登録</button>
+    </form>
+    <hr />
+    <ul v-for="book in books" :key="book.id">
+      <li>ID: {{ book.id }}</li>
+      <li>タイトル: {{ book.title }}</li>
+      <li>価格 {{ book.price }} 円</li>
+    </ul>
+    <hr>
+    <p>書籍は全部で{{ booksCount }}冊あります。</p>
+  </div>
+</template>
+
+<script>
+ export default {
+  data(){
+    return {
+      id: '',
+      title: '',
+      price: 0
+
+    }
+  },
+  computed: {
+    books() {
+      return this.$store.state.books
+    },
+    booksCount() {
+      return this.$store.getters['booksCount']
+    }
+  },
+  methods: {
+    onclick() {
+      this.$store.commit( 'addBook', {
+        book: {
+          id: this.id,
+          title: this.title,
+          price: this.price
+        }
+      })
+    }
+  }
+}
+</script>

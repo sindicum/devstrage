@@ -57,9 +57,9 @@ export default {
           mainmenu: { mainTitle:"データの管理と通信", mainLink: "/datatransfer" },
           submenu: [
             { subTitle: "親から子 propsオプション", subLink: "/datatransfer#props" },
+            { subTitle: "親から子 v-slot", subLink: "/datatransfer#vslot" },
             { subTitle: "子から親 emitメソッド", subLink: "/datatransfer#emit" },
             { subTitle: "アプリ全体 Vuex", subLink: "/datatransfer#vuex" },
-
           ],
           isOpened: false,
           mainmenubgcolor: "" 
