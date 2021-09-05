@@ -2,7 +2,8 @@
   <div class="card border-0 m-3">
     <Title title="Vuex" id="vuex" />
     <div class="text-secondary lineheight">
-      
+      <li>Vuexストアはリアクティブ。ストア状態が変わったら自動更新される。</li>
+      <li>ストアの状態変更は、唯一ミューテーションをコミットするのみ。</li>
     </div>
     <div class="card mt-3 p-3">
       <form @submit.prevent="onclick">
