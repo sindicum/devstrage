@@ -88,9 +88,6 @@ export default {
 .divcursor {
   cursor: pointer;
 }
-/* .y500hover:hover {
-  background-color:#ffc107;
-} */
 .y200hover:hover {
   background-color:#ffe69c;
 }
